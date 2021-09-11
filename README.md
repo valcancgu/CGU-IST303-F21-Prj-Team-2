@@ -1,1 +1,1 @@
-# IST303_ProjectGroup2
+# CGU-IST303-F21-Prj-Team-2
