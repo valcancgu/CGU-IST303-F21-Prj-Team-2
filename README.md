@@ -33,8 +33,9 @@
 - Update their own appointments
 - *Deactivate* their appointments
 
-3. Manager 
+3. Manager
 - Create new employee account
+- Create a new service
 - Read all appointments
 - Update all records
 - *Deactivate* an employee account (must reassign all appointments first)
@@ -72,6 +73,9 @@
 6. View all schedules
 - Receptionist or manager chooses a time window
 - List appointments for all schedules that intersect that time window
+
+7. Create a new service
+- Manager can create a service record
 
 ## Language, Framework, and Libraries
 
