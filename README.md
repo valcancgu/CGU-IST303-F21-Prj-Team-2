@@ -2,4 +2,15 @@
 
 ## Users
 
-### User Stories
+1. Receptionist
+2. Customer
+3. Manager
+4. Esthetician
+
+## User Stories
+
+
+
+## Framework
+
+- Django
