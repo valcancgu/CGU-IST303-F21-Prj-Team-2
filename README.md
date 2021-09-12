@@ -13,7 +13,7 @@
 - Guest account (guest)
 - Service (1 task, 1 financial unit, est. time to complete)
 - Appointments (list of services, 1 esthetician, 1 guest, time)
-- Schedule (list of appointments) – prints view
+- Schedule (list of appointments for a specific day) – prints view
 
 ## User Stories
 
@@ -33,7 +33,7 @@
 - Update their own appointments
 - *Deactivate* their appointments
 
-3. Manager – Dashboarding capabilities
+3. Manager 
 - Create new employee account
 - Read all appointments
 - Update all records
@@ -60,6 +60,18 @@
 - Guest wants to cancel
 - Adds a deactivate flag to appointment record
 - Checks if the reservation is within the free-cancelation time window
+
+4. Guest total bill
+- Choose time window
+- Aggregate total service cost for all appointments in that range
+
+5. Esthetician total revenue
+- Choose time window
+- Aggregate total service cost for all appointments in that range
+
+6. View all schedules
+- Receptionist or manager chooses a time window
+- List appointments for all schedules that intersect that time window
 
 ## Language, Framework, and Libraries
 
