@@ -86,6 +86,12 @@
 - Docker – deploy application; network connectivity disabled by container
 
 ### Why Django
+Django is a web framework. We can meet the customer requirement of *no-network connectivity* by deploying a Django app on a docker image that disables all network activity. The application will be accessible by accessing miye:8000 from any browser. The application will run on any machine with Python3 installed.  
+
+This gives us a number of advantages
+- Django allows us to deploy software cross platform (MacOS, Windows, Linux)
+- User interface is highly familiar
+- Updates can be provided remotely
 
 ### Django Apps (components)
 
