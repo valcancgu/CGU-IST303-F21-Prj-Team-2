@@ -44,6 +44,23 @@
 
 ## Business Logic (constraints)
 
+1. Creating an appointment
+- Guest wants a specific service
+- Software displays available start times for the day
+- Looks at schedules for all esthetician's displays unclaimed time chunks
+- Guest chooses an unclaimed time chunk
+- Appoint is registered into the system, and added to esthetician's schedule
+
+2. Change appointment details
+- Guest wants to change services or start time
+- Check the list of all estheticians
+- List available time chunks
+
+3. Cancel appointment
+- Guest wants to cancel
+- Adds a deactivate flag to appointment record
+- Checks if the reservation is within the free-cancelation time window
+
 ## Language, Framework, and Libraries
 
 - Python – mandated
