@@ -1,6 +1,5 @@
 # Team 2
 
-
 ## Users
 
 1. Receptionist
@@ -124,3 +123,11 @@
 - Guest can check in from the app to their appointment
 - Picking an esthetician
 - Forgotten passwords
+
+# Django Development
+
+## Cloning the repository
+- from *Terminal* or *PowerShell* run <code> git clone https://github.com/valcancgu/CGU-IST303-F21-Prj-Team-2.git </code>
+- <code> cd CGU-IST303-F21-Prj-Team-2 </code>
+- <code> python3 -m venv .venv </code>
+- <code> source .venv/bin/activate </code>
