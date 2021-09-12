@@ -9,8 +9,28 @@
 
 ## User Stories
 
+1. Receptionist
+- Create
+- Read
+- Update
+- Delete
 
+2. Customer
+- Create
+- Read
+- Update
+- *Deactivate*
 
-## Framework
+3. Manager – Dashboarding capabilities
+- Create
+- Read
+- Update
+- Delete
 
+4. Esthetician
+- Read
+
+## Language, Framework, and Libraries
+
+- Python
 - Django
