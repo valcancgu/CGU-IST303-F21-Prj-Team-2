@@ -83,6 +83,9 @@
 
 - Python – mandated
 - Django – built in db management, authentication module
+- Docker – deploy application; network connectivity disabled by container
+
+### Why Django
 
 ### Django Apps (components)
 
@@ -131,3 +134,18 @@
 - <code> cd CGU-IST303-F21-Prj-Team-2 </code>
 - <code> python3 -m venv .venv </code>
 - <code> source .venv/bin/activate </code>
+- <code> pip install -r requirements.txt </code>
+
+## Activating the Venv
+you must be in the director with *.venv* – check by running <code> ls -a</code>
+- <code> source .venv/bin/activate </code>
+- <code> pip install -r requirements.txt </code>
+
+## Running the App
+Inside of the folder with *manage.py* run, with the *venv* active:
+<code> python manage.py runserver </code>
+Navigate to localhost:8000
+
+## Sqlite3
+
+### Making database migrations
