@@ -11,8 +11,9 @@
 
 - Employee account (receptionist, manager, esthetician)
 - Guest account (guest)
-- Appointments
-- Schedule (list of appointments)
+- Service (1 task, 1 financial unit, est. time to complete)
+- Appointments (list of services, 1 esthetician, 1 guest, time)
+- Schedule (list of appointments) – prints view
 
 ## User Stories
 
@@ -22,23 +23,26 @@
 - Read financial details for an appointment (with printing)
 - Update appointment details
 - Update esthetician details
-- Delete
+- Delete any appointment
 
 2. Guest
 - Create their guest account
 - Create their own appointments
+- Read full list of services
 - Read their upcoming appointments
 - Update their own appointments
 - *Deactivate* their appointments
 
 3. Manager – Dashboarding capabilities
-- Create
-- Read
-- Update
-- Delete
+- Create new employee account
+- Read all appointments
+- Update all records
+- *Deactivate* an employee account (must reassign all appointments first)
 
 4. Esthetician
 - Read their appointment schedule (with print)
+
+## Business Logic (constraints)
 
 ## Language, Framework, and Libraries
 
@@ -54,3 +58,4 @@
 
 - The receptionist has information pertaining to the Esthetician's schedule. This is ideally synchronized with the payroll system
 - Guest can check in from the app to their appointment
+- Picking an esthetician
