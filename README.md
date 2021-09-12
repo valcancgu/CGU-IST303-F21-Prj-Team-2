@@ -98,7 +98,7 @@
 - Project Management: Valerie
 - Data Model: Ayush
 - Service Map: Biany & Alvaro
-- Design: Jean
+- Design: Jean & Biany
 - Testing: Valerie
 - Django Setup: Jacqueline
 - Account Creation: Praveen
