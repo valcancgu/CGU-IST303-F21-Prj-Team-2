@@ -1,5 +1,6 @@
 # Team 2
 
+
 ## Users
 
 1. Receptionist
@@ -87,19 +88,23 @@
 ### Django Apps (components)
 
 - Database (ER diagram)
-- Service Management
+- Service Menu
 - Account Creation (Guest and Employee)
--
+- Scheduling Module
+- Payment Module
 
 ## Roles
 
+- Project Management: Valerie
 - Data Model: Ayush
 - Service Map: Biany & Alvaro
 - Design: Jean
 - Testing: Valerie
 - Django Setup: Jacqueline
-- Account Creation: Jacqueline
-- Service Management: Praveen
+- Account Creation: Praveen
+- Service Menu: Praveen
+- Scheduling Module: Jacqueline
+- Payment Module: Yikai
 
 ## Sprints
 
