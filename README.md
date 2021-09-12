@@ -77,18 +77,45 @@
 7. Create a new service
 - Manager can create a service record
 
+8. There can be only one reservation at a time for any service (except mineral baths)
+
 ## Language, Framework, and Libraries
 
 - Python – mandated
 - Django – built in db management, authentication module
 
-### Django Apps
+### Django Apps (components)
 
-- Database
+- Database (ER diagram)
+- Service Management
+- Account Creation (Guest and Employee)
 -
+
+## Roles
+
+- Data Model: Ayush
+- Service Map: Biany & Alvaro
+- Design: Jean
+- Testing: Valerie
+- Django Setup: Jacqueline
+- Account Creation: Jacqueline
+- Service Management: Praveen
+
+## Sprints
+
+1. Setup Django, Start database, Start base.html, Services menu
+2. Sprint 2
+3. Sprint 3
+4. Sprint 4
+5. Sprint 5
+
+## Expectations
+
+- Lots of comments (50% comment, 50% code)
 
 ## Other Considerations
 
 - The receptionist has information pertaining to the Esthetician's schedule. This is ideally synchronized with the payroll system
 - Guest can check in from the app to their appointment
 - Picking an esthetician
+- Forgotten passwords
