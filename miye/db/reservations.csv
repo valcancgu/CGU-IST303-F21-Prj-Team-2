@@ -1,12 +1,12 @@
 Guest ID,F_Name,L_Name,Checkin Date,Check out Date,Service ID,Service Name,Service Typ,Rate/min,Duration
-1,ayush,enkhtaivan,9/18/2021,9/19/2021,1,Mineral baths,-,$2.50 ,60 min,2021-
-2,jackie,rollins,9/19/2021,9/20/2021,1,Mineral baths,-,$2.50 ,90 min,
-3,valerie,alcantara,9/20/2021,9/21/2021,2,Massage,Swedish,$3.00 ,30 min,
-4,praveen,bob,9/21/2021,9/22/2021,2,Massage,Shiatsu,$3.00 ,60 min,
-5,yikai,kevin,9/22/2021,9/23/2021,2,Massage,Deep Tissue,$3.00 ,30 min,
-6,biany,ramirez,9/23/2021,9/24/2021,3,Facial,Normal,$2.00 ,30 min,
-7,sorin,gudea,9/24/2021,9/25/2021,3,Facial,Collagen,$2.00 ,60 min,
-8,alvaro,duran,9/25/2021,9/26/2021,4,Special,Hot Stone,$3.50 ,60 min,
-9,donald,duck,9/26/2021,9/27/2021,4,Special,Sugar scrub,$3.50 ,60 min,
-10,tom,jerry,9/27/2021,9/28/2021,4,Special,herbal body wrap,$3.50 ,90 min,
-11,darth,vader,9/28/2021,9/29/2021,4,Special,botanical mud wrap,$3.50 ,90 min,
+1,ayush,enkhtaivan,9/18/2021,9/19/2021,1,Mineral baths,-,$2.50 ,60 min
+2,jackie,rollins,9/19/2021,9/20/2021,1,Mineral baths,-,$2.50 ,90 min
+3,valerie,alcantara,9/20/2021,9/21/2021,2,Massage,Swedish,$3.00 ,30 min
+4,praveen,bob,9/21/2021,9/22/2021,2,Massage,Shiatsu,$3.00 ,60 min
+5,yikai,kevin,9/22/2021,9/23/2021,2,Massage,Deep Tissue,$3.00 ,30 min
+6,biany,ramirez,9/23/2021,9/24/2021,3,Facial,Normal,$2.00 ,30 min
+7,sorin,gudea,9/24/2021,9/25/2021,3,Facial,Collagen,$2.00 ,60 min
+8,alvaro,duran,9/25/2021,9/26/2021,4,Special,Hot Stone,$3.50 ,60 min
+9,donald,duck,9/26/2021,9/27/2021,4,Special,Sugar scrub,$3.50 ,60 min
+10,tom,jerry,9/27/2021,9/28/2021,4,Special,herbal body wrap,$3.50 ,90 min
+11,darth,vader,9/28/2021,9/29/2021,4,Special,botanical mud wrap,$3.50 ,90 min
