@@ -1,4 +1,4 @@
-Guest ID,F_Name,L_Name,Checkin Date,Check out Date,Service ID,Service Name,Service Typ,Rate/min,Time,Registered Date
+Guest ID,F_Name,L_Name,Checkin Date,Check out Date,Service ID,Service Name,Service Typ,Rate/min,Duration
 1,ayush,enkhtaivan,9/18/2021,9/19/2021,1,Mineral baths,-,$2.50 ,60 min,2021-
 2,jackie,rollins,9/19/2021,9/20/2021,1,Mineral baths,-,$2.50 ,90 min,
 3,valerie,alcantara,9/20/2021,9/21/2021,2,Massage,Swedish,$3.00 ,30 min,
