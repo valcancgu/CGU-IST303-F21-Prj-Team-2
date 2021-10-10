@@ -1,5 +1,5 @@
 ---
-name: Feature request
+name: User Story request
 about: Suggest an idea for this project
 title: ''
 labels: enhancement
