@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Hello, it is now spa time</h3>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <table border="1">
+   {{ form }}
+ </table>
+    <input type="submit" value="Submit">
+</form>
+
+
+{% endblock %}

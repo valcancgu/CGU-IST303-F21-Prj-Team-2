@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Calendar</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Mineral Bath: 90 mins</th>
+      <th scope="col">Mineral Bath: 60 mins</th>
+      <th scope="col">Swedish Massage: 30 mins</th>
+      <th scope="col">Swedish Massage: 60 mins</th>
+      <th scope="col">Deep Tissue: 30 mins</th>
+      <th scope="col">Deep Tissue: 60 mins</th>
+      <th scope="col">Shiatsu: 30 mins</th>
+      <th scope="col">Shiatsu: 60 mins</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for appointment in appointments %}
+      <tr>
+        {% if appointment.service == '0' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
+        {% if appointment.service == '1' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
+        {% if appointment.service == '2' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
+        {% if appointment.service == '3' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
+        {% if appointment.service == '4' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
+        {% if appointment.service == '5' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
+        {% if appointment.service == '6' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
+        {% if appointment.service == '7' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+
+
+
+{% endblock %}

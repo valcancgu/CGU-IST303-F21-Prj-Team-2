@@ -15,10 +15,19 @@ class DBService(models.Model):
     def __str__(self):
         return f"{self.service_name}: {self.duration} mins – {self.cost_per_minute} per minute"
 
-"""
-python3 manage.py makemigrations
-python3 manage.py migrate
-python3 manage.py createsuperuser
-python3 manage.py runserver
-"""
-# Create your models here.
+
+class DBGuest(models.Model):
+    id = models.IntegerField(primary_key=True, editable=False)
+    username = models.CharField(max_length=32)
+
+
+class DBAppointment(models.Model):
+    id = models.IntegerField(primary_key=True, editable=False)
+    service = models.CharField(max_length=32)
+    guest = models.IntegerField()
+    date = models.DateField()
+    start_time = models.TimeField()
+
+
+    class Meta:
+        ordering = ['-date', '-start_time']
