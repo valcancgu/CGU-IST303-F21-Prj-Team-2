@@ -10,17 +10,7 @@ class SignupForm(forms.Form):
     def clean(self):
         cleaned_data = super().clean()
 
-        date = cleaned_data.get("date")
-        time = cleaned_data.get("time")
-        service = cleaned_data.get("service")
-
-        open = datetime.strptime("08:00:00", "%H:%M:%S").time()
-        close = datetime.strptime("17:00:00", "%H:%M:%S").time()
-
-        if not is_time_between(open, close, time):
-            msg = "WE ARE CLOSED AT THIS TIME"
-            self.add_error('date', msg)
-
+        
 
 
 

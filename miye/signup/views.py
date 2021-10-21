@@ -1,28 +1,33 @@
 from django.shortcuts import render
 from db.models import DBGuest
-
+from db.models import DBService
+from django.http import HttpResponseRedirect
 from .forms import SignupForm
+from django.urls import reverse
+
+from scheduler.forms import ScheduleForm
 
 # Create your views here.
 def signup(request):
+
+    services = DBService.objects.all()
+
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
-        form = SignupForm(request.POST)
+        form_signup = SignupForm(request.POST)
+
+
+
         # check whether it's valid:
-        if form.is_valid():
+        if form_signup.is_valid():
+            guest, created = DBGuest.objects.get_or_create(username=form_signup['username'].value())
 
-            if timeslot_is_free(form['service'].value(), form['date'].value(), form['time'].value()):
-                DBAppointment.objects.create(service=form['service'].value(), guest=form['spa_number'].value(),
-                    date=form['date'].value(), start_time=form['time'].value())
 
-                return HttpResponseRedirect('/calendar')
-
-            else:
-                return HttpResponseRedirect('/')
+            return render(request, 'signup/spa_number.html', {'guest': guest})
 
     # if a GET (or any other method) we'll create a blank form
     else:
-        form = SignupForm()
+        form_signup = SignupForm()
 
-    guests = DBGuest.objects.all()
-    return render(request, 'signup/signup.html', {'form': form, 'guests': guests})
+    # guests = DBGuest.objects.all()
+    return render(request, 'signup/signup.html', {'form': form_signup})

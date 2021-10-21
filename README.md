@@ -1,5 +1,25 @@
 # Team 2
 
+## How to launch the application
+
+1. Clone the repository
+2. Creat the venv
+<code>  
+python3 -m venv .venv  
+</code>
+3. Activate the venv  
+<code> source .venv/bin/activate </code>  
+4. install the requirements  
+<code> pip3 install -r requirements.txt </code>  
+5. go to the correct folder (miye)  
+6. run the app  
+<code> python manage.py runserver </code>  
+
+## How to migrate  
+
+<code> python manage.py makemigrations </code>  
+<code> python manage.py migrate </code>
+
 ## Users
 
 1. Receptionist

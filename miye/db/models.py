@@ -17,7 +17,7 @@ class DBService(models.Model):
 
 
 class DBGuest(models.Model):
-    id = models.IntegerField(primary_key=True, editable=False)
+    id = models.AutoField(primary_key=True, editable=False)
     username = models.CharField(max_length=32)
 
 
@@ -27,7 +27,6 @@ class DBAppointment(models.Model):
     guest = models.IntegerField()
     date = models.DateField()
     start_time = models.TimeField()
-
 
     class Meta:
         ordering = ['-date', '-start_time']
