@@ -18,7 +18,7 @@ python3 -m venv .venv
 ## How to migrate  
 
 <code> python manage.py makemigrations </code>  
-<code> python manage.py migrate </code>
+<code> python manage.py migrate </code>  
 
 ## Users
 
@@ -34,6 +34,11 @@ python3 -m venv .venv
 - Service (1 task, 1 financial unit, est. time to complete)
 - Appointments (list of services, 1 esthetician, 1 guest, time)
 - Schedule (list of appointments for a specific day) – prints view
+
+## Scope Shift  
+
+![Alt text](img.png?raw=true "Title")
+
 
 ## User Stories
 

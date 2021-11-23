@@ -5,6 +5,7 @@ from db.models import DBService, DBGuest, DBAppointment
 from .forms import ScheduleForm, is_time_between
 from datetime import datetime, timedelta
 
+from itertools import chain
 
 def timeslot_is_free(service, date, time):
     print(service)
@@ -73,8 +74,58 @@ def index(request):
         if form.is_valid():
 
             if timeslot_is_free(form['service'].value(), form['date'].value(), form['time'].value()):
-                DBAppointment.objects.create(service=form['service'].value(), guest=form['spa_number'].value(),
-                    date=form['date'].value(), start_time=form['time'].value())
+                """
+                guest = DBGuest.objects.filter(id=form['spa_number'].value())
+
+                appt = DBAppointment(service=form['service'].value(),
+                     date=form['date'].value(), start_time=form['time'].value())
+
+                appt.save()
+
+                appt.guests.add(guest.id)
+
+                appt.save()
+                """
+                spa_numbers = form['spa_number'].value()
+
+                lookup_numbers = []
+
+                for number in spa_numbers.split(','):
+                    lookup_numbers.append(int(number))
+
+                guests = []
+
+                for number in lookup_numbers:
+                    try:
+                        guest = DBGuest.objects.get(id=number)
+                        guests.append(guest)
+                    except Exception as e:
+                        return HttpResponseRedirect('/no_guest')
+
+                appt = DBAppointment.objects.create(
+                    service=form['service'].value(),
+                    date=form['date'].value(),
+                    start_time=form['time'].value()
+                )
+
+                for guest in guests:
+                    guest.appointments.add(appt)
+
+                # receive_user = User.objects.get(id=user_id)
+
+                # print(guest.appointments.all())
+                #
+                # appt.guests.add(guest)
+
+
+                # message = Message.objects.create(
+                    # title=title,
+                    # content=content,
+                    # create_user=create_user,
+                    # receive_user=receive_user,
+                # )
+                # message.save() - no needs in save() when you use create() method
+                # message.receive_user.add(receive_user)
 
                 return HttpResponseRedirect('/calendar')
 
@@ -88,6 +139,23 @@ def index(request):
     services = DBService.objects.all()
     return render(request, 'scheduler/schedule.html', {'form': form, 'services': services})
 
+def no_guest(request):
+    return render(request, 'scheduler/no-guest.html')
+
+
 def calendar(request):
     appointments = DBAppointment.objects.order_by('date', 'start_time')
-    return render(request, 'scheduler/calendar.html', {'appointments': appointments})
+    guests = DBGuest.objects.all()
+    #print(appointments.guests)
+    print(appointments[0].dbguest_set.all())
+    display_list = []
+
+    for appt in appointments:
+        display_list.append({
+            'service': appt.service,
+            'date': appt.date,
+            'start_time': appt.start_time,
+            'guests': list(appt.dbguest_set.all())
+        })
+
+    return render(request, 'scheduler/calendar.html', {'display_list': display_list, 'appointments': appointments, 'guests': guests})

@@ -5,31 +5,33 @@
 <h3>Calendar</h3>
 
 <table class="table">
-  <thead>
+  <thead style="color:gray; background:lightblue">
     <tr>
       <th scope="col">Mineral Bath: 90 mins</th>
-      <th scope="col">Mineral Bath: 60 mins</th>
+      <th style="color:white; background:darkblue" scope="col">Mineral Bath: 60 mins</th>
       <th scope="col">Swedish Massage: 30 mins</th>
-      <th scope="col">Swedish Massage: 60 mins</th>
+      <th style="color:white; background:darkblue" scope="col">Swedish Massage: 60 mins</th>
       <th scope="col">Deep Tissue: 30 mins</th>
-      <th scope="col">Deep Tissue: 60 mins</th>
+      <th style="color:white; background:darkblue" scope="col">Deep Tissue: 60 mins</th>
       <th scope="col">Shiatsu: 30 mins</th>
-      <th scope="col">Shiatsu: 60 mins</th>
+      <th style="color:white; background:darkblue" scope="col">Shiatsu: 60 mins</th>
     </tr>
   </thead>
-  <tbody>
-    {% for appointment in appointments %}
+  <tbody style="background:cyan">
+
+    {% for itm in display_list %}
       <tr>
-        {% if appointment.service == '0' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
-        {% if appointment.service == '1' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
-        {% if appointment.service == '2' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
-        {% if appointment.service == '3' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
-        {% if appointment.service == '4' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
-        {% if appointment.service == '5' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
-        {% if appointment.service == '6' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
-        {% if appointment.service == '7' %}<td>{{appointment.date}} – {{appointment.guest}} – {{appointment.start_time}}</td> {% else %} <td></td> {% endif %}
+      {% if itm.service == '0' %}<td>{{itm.date}} <br>{% for g in itm.guests %} • {{g.username}} <br> {% endfor %} STARTS: {{itm.start_time}}</td> {% else %} <td></td> {% endif %}
+      {% if itm.service == '1' %}<td>{{itm.date}}<br>{% for g in itm.guests %} • {{g.username}} <br> {% endfor %} STARTS:{{itm.start_time}}</td> {% else %} <td></td> {% endif %}
+      {% if itm.service == '2' %}<td>{{itm.date}}<br>{% for g in itm.guests %} • {{g.username}} <br> {% endfor %} STARTS:{{itm.start_time}}</td> {% else %} <td></td> {% endif %}
+      {% if itm.service == '3' %}<td>{{itm.date}}<br>{% for g in itm.guests %} • {{g.username}} <br> {% endfor %} STARTS:{{itm.start_time}}</td> {% else %} <td></td> {% endif %}
+      {% if itm.service == '4' %}<td>{{itm.date}}<br>{% for g in itm.guests %} • {{g.username}} <br> {% endfor %} STARTS:{{itm.start_time}}</td> {% else %} <td></td> {% endif %}
+      {% if itm.service == '5' %}<td>{{itm.date}}<br>{% for g in itm.guests %} • {{g.username}} <br> {% endfor %} STARTS:{{itm.start_time}}</td> {% else %} <td></td> {% endif %}
+      {% if itm.service == '6' %}<td>{{itm.date}}<br>{% for g in itm.guests %} • {{g.username}} <br> {% endfor %} STARTS:{{itm.start_time}}</td> {% else %} <td></td> {% endif %}
+      {% if itm.service == '7' %}<td>{{itm.date}}<br>{% for g in itm.guests %} • {{g.username}} <br> {% endfor %} STARTS:{{itm.start_time}}</td> {% else %} <td></td> {% endif %}
       </tr>
     {% endfor %}
+
   </tbody>
 </table>
 

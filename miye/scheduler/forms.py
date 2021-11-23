@@ -3,7 +3,9 @@ from django.contrib.admin.widgets import AdminDateWidget
 from django.forms.fields import DateField, DateTimeField
 from datetime import datetime, time
 
-
+"""
+TEST ME: fail if begin_time is before end_time
+"""
 def is_time_between(begin_time, end_time, check_time=None):
     # If check time is not given, default to current UTC time
     check_time = check_time or datetime.utcnow().time()
@@ -12,10 +14,19 @@ def is_time_between(begin_time, end_time, check_time=None):
     else: # crosses midnight
         return check_time >= begin_time or check_time <= end_time
 
+def is_parseable(spa_number):
+    try:
+        for number in spa_number.split(','):
+            check = int(number)
+        return True
+    except Exception as e:
+        print(e)
+        return False
 
 class ScheduleForm(forms.Form):
 
-    spa_number = forms.IntegerField()
+    #spa_number = forms.IntegerField()
+    spa_number = forms.CharField()
     date = DateField(widget = forms.SelectDateWidget())
     time = forms.TimeField()
     print(time)
@@ -37,6 +48,12 @@ class ScheduleForm(forms.Form):
         date = cleaned_data.get("date")
         time = cleaned_data.get("time")
         service = cleaned_data.get("service")
+
+        spa_number = cleaned_data.get("spa_number")
+
+        if not is_parseable(spa_number):
+            msg = "BAD INPUT FOR SPA NUMBER"
+            self.add_error('spa_number', msg)
 
         open = datetime.strptime("08:00:00", "%H:%M:%S").time()
         close = datetime.strptime("17:00:00", "%H:%M:%S").time()
